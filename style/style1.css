@@ -1,0 +1,167 @@
+html,body,
+main {
+    display: flex;
+    flex-direction: row;
+}
+#background {
+    position: absolute; left:0%; top:0%; bottom:0%;
+    z-index: 0;
+}
+.imagestack {
+    position: absolute; left:0%; top:0%; bottom:0%;
+    z-index: 1;
+} 
+
+.imagestack img {
+    position: absolute; left:0%; top:0%; bottom:0%; 
+    object-fit: cover;
+}
+.imagestack img:nth-child(1) { z-index: 1; }
+.imagestack img:nth-child(2) { z-index: 2; }
+.imagestack img:nth-child(3) { z-index: 3; }
+.imagestack img:nth-child(4) { z-index: 4; }
+.imagestack img:nth-child(5) { z-index: 5; }
+
+#spark{
+    opacity: 0.35;
+}
+
+#sound{
+    height: 10%;
+    margin: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#snes{
+    position: absolute; left: 850px; top: 400px;
+    transition: transform 600ms ease;
+}
+#snes.moved {
+    transform: translateY(-400px) translateX(0px);
+}
+
+#bubble {
+    position: absolute; left: 1070px; top: 13%;
+    width: 240px;
+    height: 120px;
+    background-color: white;
+    border-radius: 20px;
+    border-bottom-left-radius: 0%;
+    font-size: 10px;
+    box-shadow: 5px 7px rgb(68, 60, 90);
+    z-index: 9;
+    opacity: 0%;
+    animation: fadeIn 1s ease-in 4s 1 normal forwards;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#text {
+    font-family: 'courier new', monospace;
+    text-align: center;
+    padding: 15px;
+    color: rgb(33, 33, 37);
+}
+
+#steam{
+    position: absolute; left: 1035px; top: 210px;
+    z-index: 8;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.buttons{
+    cursor: pointer;
+    opacity: 0%;
+    z-index: 10;
+}
+#butt {
+    position: absolute; left: 1520px; top: 5%;
+    width: 400px;
+    height: 400px;
+}
+#butt2 {
+    position: absolute; left: 1365px; top: 100px;
+    width: 100px;
+    height: 170px;
+}
+#butt3 {
+    position: absolute; left: 700px; top: 240px;
+    width: 100px;
+    height: 130px;
+}
+#butt4 {
+    position: absolute; left: 900px; top: 400px;
+    width: 200px;
+    height: 100px;
+}
+#butt5 {
+    position: absolute; left: 1140px; top: 300px;
+    width: 100px;
+    height: 100px;
+    cursor: grab;
+}
+#butt6 {
+    position: absolute; left: 0px; top: 185px;
+    width: 60px;
+    height: 55px;
+    cursor: grab;
+}
+#butt7 {
+    position: absolute; left: 264px; top: 240px;
+    width: 100px;
+    height: 58px;
+    cursor: grab;
+}
+#butt8 {
+    position: absolute; left: 247px; top: 39px;
+    width: 110px;
+    height: 150px;
+    cursor: grab;
+}
+#butt9 {
+    position: absolute; left: 626px; top: 150px;
+    width: 60px;
+    height: 60px;
+    cursor: grab;
+}
+
+#uhrzeigerlang{
+    position: absolute; left: 1414px; top: 138px;
+    background-color: rgb(68, 60, 90);
+    width: 2px;
+    height: 30px;
+    transform-origin: 50% 100%;
+    transform: rotate(0deg);
+}
+#uhrzeigerkurz{
+    position: absolute; left: 1414px; top: 168px;
+    background-color: rgb(68, 60, 90);
+    width: 2px;
+    height: 15px;
+    transform-origin: 50% 0%;
+    transform: rotate(0deg);
+}
+#clock:hover #uhrzeigerlang{
+    animation: spin 3s linear infinite;
+}
+#clock:hover #uhrzeigerkurz{
+    animation: spin 35s linear infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    } 
+}
+
+#butt3:hover #eo{
+    visibility: visible;
+}
+#butt3:hover #ec{
+    visibility: hidden;
+}
+
